@@ -3,7 +3,7 @@
         <ul class="sidebar-menu" id="nav-accordion">
             <p class="centered">
                 <a href="/profile">
-                    <img src="{{Auth::user()->provider ? Auth::user()->profile_pic : asset('storage/' . Auth::user()->profile_pic)}}" class="img-circle" width="80">
+                    <img src="{{Auth::user()->provider ? Auth::user()->profile_pic : asset('images/' . Auth::user()->profile_pic)}}" class="img-circle" width="80">
                 </a>
             </p>
 

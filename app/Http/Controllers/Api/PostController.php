@@ -4,12 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Post;
-use App\Comment;
 use App\Event;
 use App\PostCategory;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
@@ -22,8 +21,8 @@ class PostController extends Controller
     // Display a listing of the post.
     public function index(Request $request)
     {
-        $posts = Post::where('title', 'LIKE', '%'.$request->input('title').'%')->latest()->with(['category', 'user'])->withCount('comments')->paginate(10);
-        $earliestEvent = Event::all()->sortBy(function($event) {
+        $posts = Post::where('title', 'LIKE', '%' . $request->input('title') . '%')->latest()->with(['category', 'user'])->withCount('comments')->paginate(10);
+        $earliestEvent = Event::all()->sortBy(function ($event) {
             if (!$event->date || !$event->time)
                 return '40000-01-01-00:00:00';
             return $event->date . '-' . $event->time;
@@ -33,7 +32,7 @@ class PostController extends Controller
 
     public function user_posts($id, Request $request)
     {
-        $posts = Post::where('user_id', $id)->where('title', 'LIKE', '%'.$request->input('title').'%')->latest()->with(['category'])->paginate(10);
+        $posts = Post::where('user_id', $id)->where('title', 'LIKE', '%' . $request->input('title') . '%')->latest()->with(['category'])->paginate(10);
         return response()->json(["data" => $posts]);
     }
 
@@ -61,7 +60,8 @@ class PostController extends Controller
         if ($post->save()) {
             if ($request->hasfile('coverImage')) {
                 $ext = $request->file('coverImage')->extension();
-                $coverImage_path = $request->file('coverImage')->storeAs('posts', $post->id . '.' . $ext, 'public');
+
+                $coverImage_path = save_image($request->file('coverImage'), $post->id . '.' . $ext, 'posts');
                 $post->coverImage = $coverImage_path;
                 $post->save();
             }
@@ -91,8 +91,8 @@ class PostController extends Controller
 
     public function blog_single($id)
     {
-        $post = Post::with(['category', 'user','comments.user', 'comments.replies.user'])->find($id);
-        $earliestEvent = Event::all()->sortBy(function($event) {
+        $post = Post::with(['category', 'user', 'comments.user', 'comments.replies.user'])->find($id);
+        $earliestEvent = Event::all()->sortBy(function ($event) {
             if (!$event->date || !$event->time)
                 return '40000-01-01-00:00:00';
             return $event->date . '-' . $event->time;
@@ -138,15 +138,11 @@ class PostController extends Controller
         $post->title = strtoupper($request->input('title'));
         $post->content = $request->input('content');
         $post->category_id = $request->input('category_id');
-
         if ($request->hasfile('coverImage')) {
-
-            if (Storage::exists('public/' . $post->coverImage)) {
-                Storage::delete('public/' . $post->coverImage);
-            }
+            delete_image($post->coverImage);
 
             $ext = $request->file('coverImage')->extension();
-            $coverImage_path = $request->file('coverImage')->storeAs('posts', $post->id . '.' . $ext, 'public');
+            $coverImage_path = save_image($request->file('coverImage'), $post->id . '.' . $ext, 'posts');
             $post->coverImage = $coverImage_path;
         }
 
@@ -182,9 +178,7 @@ class PostController extends Controller
 
         $post->comments()->delete();   //delete all comments relating to this post
 
-        if (Storage::exists('public/' . $post->coverImage)) {
-            Storage::delete('public/' . $post->coverImage);
-        }
+        delete_image($post->coverImage);
 
         $post->delete();
         return response()->json(["data" => $post, "message" => "Post deleted successfully"]);

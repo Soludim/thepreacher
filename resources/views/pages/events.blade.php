@@ -35,7 +35,7 @@
                     <div class="text">
                         <h3 class="mb-2"><a href="{{url('/event/' . Crypt::encrypt($event->id))}}">{{$event->name}}</a></h3>
                         <p class="mb-4"><span>{{$event->time}} at {{$event->venue}}</span></p>
-                        <a href="{{url('/event/' . Crypt::encrypt($event->id))}}" class="img mb-4" style="background-image: url({{asset('storage/' . $event->coverImage)}});"></a>
+                        <a href="{{url('/event/' . Crypt::encrypt($event->id))}}" class="img mb-4" style="background-image: url({{asset('images/' . $event->coverImage)}});"></a>
                         <p>{!!substr($event->details, 0, 100)!!} ...</p>
                     </div>
                 </div>

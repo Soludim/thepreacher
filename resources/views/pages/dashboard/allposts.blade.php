@@ -42,7 +42,7 @@
                     </td>
                     <td style="text-align:center">{{$data->data[$i]->category->name}}</td>
                     <td style="text-align:center">{{$data->data[$i]->user_id != Auth::user()->id ? $data->data[$i]->user->name : 'You'}}</td>
-                    <td style="text-align:center">{{date('M', strtotime($data->data[$i]->created_at))}} {{date('d', strtotime($data->data[$i]->created_at)) }}, {{ date('yy', strtotime($data->data[$i]->created_at)) }}</td>
+                    <td style="text-align:center">{{date('M', strtotime($data->data[$i]->created_at))}} {{date('d', strtotime($data->data[$i]->created_at)) }}, {{ date('Y', strtotime($data->data[$i]->created_at)) }}</td>
                     <td>
                       <a href="{{ url('post/' . $data->data[$i]->id . '/details') }}" class="btn btn-success btn-xs"><i class="fa fa-check-square-o"></i></a>
                       <a href="{{ url('post/' . $data->data[$i]->id . '/edit') }}" class="{{$data->data[$i]->user_id != Auth::user()->id ? 'disabled' : ''}} btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>

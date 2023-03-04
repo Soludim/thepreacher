@@ -53,7 +53,7 @@ class EventController extends Controller
         if ($event->save()) {
             if ($request->hasfile('coverImage')) {
                 $ext = $request->file('coverImage')->extension();
-                $coverImage_path = $request->file('coverImage')->storeAs('events', $event->id . '.' . $ext, 'public');
+                $coverImage_path = save_image($request->file('coverImage'), $event->id . '.' . $ext, 'events');
                 $event->coverImage = $coverImage_path;
                 $event->save();
             }
@@ -103,12 +103,10 @@ class EventController extends Controller
 
         if ($request->hasfile('coverImage')) {
 
-            if (Storage::exists('public/' . $event->coverImage) && $event->coverImage != 'events/default.jpg') {
-                Storage::delete('public/' . $event->coverImage);
-            }
+            delete_image($event->coverImage);
 
             $ext = $request->file('coverImage')->extension();
-            $coverImage_path = $request->file('coverImage')->storeAs('events', $event->id . '.' . $ext, 'public');
+            $coverImage_path = save_image($request->file('coverImage'), $event->id . '.' . $ext, 'events');
             $event->coverImage = $coverImage_path;
         }
 
@@ -129,9 +127,7 @@ class EventController extends Controller
             return response()->json(["message" => "Unauthaurized to delete this event"]);
         }
 
-        if (Storage::exists('public/' . $event->coverImage)) {
-            Storage::delete('public/' . $event->coverImage);
-        }
+        delete_image($event->coverImage);
 
         $event->delete();
         return response()->json(["data" => $event]);

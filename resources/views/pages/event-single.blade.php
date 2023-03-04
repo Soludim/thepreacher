@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 ftco-animate">
-                <img src="{{asset('storage/'. $data->event->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
+                <img src="{{asset('images/'. $data->event->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
                 <p>Date: {{$data->event->date != null ? $data->event->date : "To be communicated"}}</p>
                 <p>Time: {{$data->event->time != null ? date('h:i a', strtotime($data->event->time)) : "To be communicated"}}</p>
                 <p>Venue: {{$data->event->venue != null ? $data->event->venue : "To be communicated"}} </p>

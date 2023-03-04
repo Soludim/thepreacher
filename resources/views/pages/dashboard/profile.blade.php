@@ -9,7 +9,7 @@
           <div class="col-md-12 centered">
             <div class="profile-pic">
               <p>
-                <img src="{{Auth::user()->provider ? Auth::user()->profile_pic : asset('storage/' . Auth::user()->profile_pic)}}" class="img-circle" />
+                <img src="{{Auth::user()->provider ? Auth::user()->profile_pic : asset('images/' . Auth::user()->profile_pic)}}" class="img-circle" />
               </p>
             </div>
           </div>

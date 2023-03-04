@@ -60,7 +60,7 @@
             <h4>Edit Post</h4>
           </div>
           <div class="panel-body">
-            <form action="{{ route('post.update', Crypt::encrypt($data->id)) }}" method="post" autocomplete="off" enctype="multipart/form-data">
+            <form action="{{ route('post.update', $data->id) }}" method="post" autocomplete="off" enctype="multipart/form-data">
               @csrf
               @method('put')
               <div class="row">
@@ -99,7 +99,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2">
-                  <img src="{{asset('storage/'. $data->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
+                  <img src="{{asset('images/'. $data->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
                 </div>
               </div>
               <div class="form-group pull-right">

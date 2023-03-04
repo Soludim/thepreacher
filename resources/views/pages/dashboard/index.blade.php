@@ -84,7 +84,7 @@
               <!-- /weather-2 header -->
               <div class="row centered">
                 <p>{{$data->earliestEvent->name}}</p>
-                <img src="{{asset('storage/'. $data->earliestEvent->coverImage)}}" height="110px">
+                <img src="{{asset('images/'. $data->earliestEvent->coverImage)}}" height="110px">
               </div>
               <div class="row data">
                 <div class="goleft">

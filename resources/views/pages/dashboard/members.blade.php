@@ -20,7 +20,7 @@
                 <div data-toggle="collapse" data-target="#role{{$user->id}}" aria-expanded="false" aria-controls="role{{$user->id}}">
                     <div class="item text-center">
                         <div class="testimony-wrap p-4 pb-3" style="padding: 10px">
-                            <div class="user-img mb-4 img-fluid" style="background-image: url({{ $user->provider ?  $user->profile_pic : asset('storage/' . $user->profile_pic)}})">
+                            <div class="user-img mb-4 img-fluid" style="background-image: url({{ $user->provider ?  $user->profile_pic : asset('images/' . $user->profile_pic)}})">
                             </div>
                             <div style="height:60px" class="text">
                                 <p class="name">{{$user->name}}</p>
@@ -124,7 +124,7 @@
                 <div data-toggle="collapse" data-target="#role${user.id}" aria-expanded="false" aria-controls="role${user.id}">
                     <div class="item text-center">
                         <div class="testimony-wrap p-4 pb-3" style="padding: 10px">
-                            <div class="user-img mb-4 img-fluid" style="background-image: url({{asset('storage/${user.profile_pic}')}})">
+                            <div class="user-img mb-4 img-fluid" style="background-image: url({{asset('images/${user.profile_pic}')}})">
 </div>
 <div style="height:60px" class="text">
     <p class="name">${user.name}</p>

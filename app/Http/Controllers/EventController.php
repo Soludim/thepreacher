@@ -165,11 +165,11 @@ class EventController extends Controller
 
         $client = new Client(['base_uri' => config('app.api_base')]);
         try {
-            $res = $client->post('api/event/' . $id . '?api_token=' . Auth::user()->api_token, [
+            $client->post('api/event/' . $id . '?api_token=' . Auth::user()->api_token, [
                 'multipart' => $data,
             ]);
 
-            return redirect()->route('devents');
+            return redirect('/event/' . $id . '/details');
         } catch (ClientException $th) {
             return back();
         }

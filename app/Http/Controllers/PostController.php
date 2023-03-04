@@ -109,7 +109,7 @@ class PostController extends Controller
 
         try {
             $client = new Client(['base_uri' => config('app.api_base')]);
-            $client->post('api/post?api_token=' . Auth::user()->api_token, ['multipart' => $data]);
+            $re = json_decode($client->post('api/post?api_token=' . Auth::user()->api_token, ['multipart' => $data])->getBody());
             return  redirect()->route('posts');
         } catch (ClientException $th) {
             return back();
@@ -141,7 +141,6 @@ class PostController extends Controller
             $client = new Client(['base_uri' => config('app.api_base')]);
 
             $response = json_decode($client->get('api/post/'.$id)->getBody());
-
             return view('pages.dashboard.post_details', ['post' => $response->data]);
         } catch (ClientException $th) {
             return back();
@@ -197,7 +196,7 @@ class PostController extends Controller
 
         $client = new Client(['base_uri' => config('app.api_base')]);
         try {
-            $client->post('api/post/' . Crypt::decrypt($id) . '?api_token=' . Auth::user()->api_token, [
+            $client->post('api/post/' . $id . '?api_token=' . Auth::user()->api_token, [
                 'multipart' => $data,
             ]);
 

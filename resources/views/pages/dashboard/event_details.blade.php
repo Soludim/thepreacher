@@ -5,19 +5,28 @@
   <section class="wrapper">
     <div style="padding:8px">
       <div class="row mt">
-          @if($event != null)
-          <div class="col-lg-3">
-            <img src="{{asset('storage/'. $event->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
-            <p>Date: {{$event->date != null ? $event->date : "Not Set"}}</p>
-            <p>Time: {{$event->time != null ? date('h:i a', strtotime($event->time)) : "Not Set"}}</p>
-            <p>Venue: {{$event->venue != null ? $event->venue : "Not Set"}} </p>
-            <p>Created on: {{date('F', strtotime($event->created_at))}} {{date('d', strtotime($event->created_at)) }}, {{ date('yy', strtotime($event->created_at)) }}</p>
-          </div>
-          <div class="col-lg-9">
-             <h2 class=""style="padding: 8px; text-align: center;">{{$event->name}}</h2>
-             <p>{!!$event->details!!}</p>
-          </div>
-          @endif
+        @if($event != null)
+        <div class="col-lg-3">
+          <img src="{{asset('images/'. $event->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
+          <p>Date: {{$event->date != null ? $event->date : "Not Set"}}</p>
+          <p>Time: {{$event->time != null ? date('h:i a', strtotime($event->time)) : "Not Set"}}</p>
+          <p>Venue: {{$event->venue != null ? $event->venue : "Not Set"}} </p>
+          <p>Created on: {{date('F', strtotime($event->created_at))}} {{date('d', strtotime($event->created_at)) }}, {{ date('Y', strtotime($event->created_at)) }}</p>
+        </div>
+        <div class="col-lg-9">
+          <h2 class="" style="padding: 8px; text-align: center;">{{$event->name}}</h2>
+          <p>{!!$event->details!!}</p>
+        </div>
+        @endif
+      </div>
+      <div class="row form-group pull-right" style="margin-top: 10px">
+        <a href="{{ url('devent/' . $event->id . '/edit') }}" type="submit" class="btn btn-theme03">
+          Edit Event
+        </button>
+        <a href="/devents" class="btn btn-default">
+          <i class="fa fa-list"></i>
+          To List
+        </a>
       </div>
     </div>
   </section>

@@ -7,8 +7,11 @@
       <div class="row mt">
         @if($sermon != null)
         <div class="col-12 text-center mb-3">
-          <h3><span class="text-uppercase">&ldquo;{{$sermon->topic}}&rdquo;</span> &mdash; <span> {{$sermon->speaker}}</span></h3>
-          <p>Created on: {{date('M', strtotime($sermon->created_at))}} {{date('d', strtotime($sermon->created_at)) }}, {{ date('yy', strtotime($sermon->created_at)) }}</p>
+          <h3>
+            <span class="badge badge-secondary" style="margin-left:5px; color:#fff; font-size:50%">{{$sermon->category->name}}</span>
+            <span class="text-uppercase">&ldquo;{{$sermon->topic}}&rdquo;</span> &mdash; <span> {{$sermon->speaker}}</span>
+          </h3>
+          <p>Created on: {{date('M', strtotime($sermon->created_at))}} {{date('d', strtotime($sermon->created_at)) }}, {{ date('Y', strtotime($sermon->created_at)) }}</p>
         </div>
         <div class="col-12">
           <audio id="player2" preload="none" controls class="player">
@@ -17,21 +20,30 @@
         </div>
         @endif
       </div>
+      <div class="row form-group pull-right" style="margin-top: 10px">
+        <a href="{{ url('dsermon/' . $sermon->id . '/edit') }}" type="submit" class="btn btn-theme03">
+          Edit Sermon
+          </button>
+          <a href="/dsermons" class="btn btn-default">
+            <i class="fa fa-list"></i>
+            To List
+          </a>
+      </div>
     </div>
   </section>
 </section>
 <style>
-    .player {
-        width: 100%;
-        height: 32px;
-        border-radius: 0;
-    }
+  .player {
+    width: 100%;
+    height: 32px;
+    border-radius: 0;
+  }
 
-    audio {
-        border: 2px solid black;
-        border-radius: 0px;
-        color: black;
-    }
+  audio {
+    border: 2px solid black;
+    border-radius: 0px;
+    color: black;
+  }
 </style>
 <script src="{{asset('lib/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('lib/bootstrap/js/bootstrap.min.js')}}"></script>

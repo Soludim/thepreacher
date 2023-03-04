@@ -106,7 +106,8 @@ class UserController extends Controller
 
         if ($request->hasfile('profile_pic')) {
             $ext = $request->file('profile_pic')->extension();
-            $profile_pic_path = $request->file('profile_pic')->storeAs('profile_pics', $user->id . '.' . $ext, 'public');
+            $profile_pic_path = save_image($request->file('profile_pic'), $user->id . '.' . $ext, 'profile_pics');
+
             $user->profile_pic = $profile_pic_path;
             $user->save();
         }
@@ -152,16 +153,10 @@ class UserController extends Controller
         $user->lives_in = $request->input('lives_in');
         $user->contact = $request->input('contact');
         if ($request->hasfile('profile_pic')) {
-
-            if (
-                Storage::exists('public/' . $user->profile_pic)
-                && $user->profile_pic != 'profile_pics/default.png'
-            ) {
-                Storage::delete('public/' . $user->profile_pic);
-            }
+            delete_image($user->profile_pic);
 
             $ext = $request->file('profile_pic')->extension();
-            $profile_pic_path = $request->file('profile_pic')->storeAs('profile_pics', $user->id . '.' . $ext, 'public');
+            $profile_pic_path = save_image($request->file('coverImage'), $user->id . '.' . $ext, 'profile_pics');
             $user->profile_pic = $profile_pic_path;
         }
 

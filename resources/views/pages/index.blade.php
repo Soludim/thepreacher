@@ -122,7 +122,7 @@
         <div class="row mb-2">
             <div class="col-12 text-center mb-3">
                 <h3>
-                <span class="badge badge-secondary" style="margin-left:5px; color:#fff; font-size:50%">{{$sermon->category->name}}</span>
+                    <span class="badge badge-secondary" style="margin-left:5px; color:#fff; font-size:50%">{{$sermon->category->name}}</span>
                     <span class="text-uppercase">&ldquo;{{$sermon->topic}}&rdquo;</span> &mdash;
                     <span> {{$sermon->speaker}}</span>
                 </h3>
@@ -155,7 +155,7 @@
             @foreach($data->posts as $post)
             <div class="col-md-4 ftco-animate">
                 <div class="blog-entry" data-aos-delay="100">
-                    <a href="{{url('/post/' . Crypt::encrypt($post->id))}}" class="block-20" style="background-image: url({{Storage::url($post->coverImage)}});">
+                    <a href="{{url('/post/' . Crypt::encrypt($post->id))}}" class="block-20" style="background-image: url({{asset('images/'.$post->coverImage)}});">
                     </a>
                     <div class="text p-4">
                         <div class="meta mb-3">

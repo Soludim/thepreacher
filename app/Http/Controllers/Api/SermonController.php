@@ -92,7 +92,7 @@ class SermonController extends Controller
     // Display the specified sermon.
     public function show($id)
     {
-        $sermon = Sermon::find($id);
+        $sermon = Sermon::with('category')->find($id);
         if ($sermon == null) {
             return response()->json(["message" => "sermon does not exist"]);
         }

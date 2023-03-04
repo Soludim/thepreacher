@@ -168,7 +168,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-2">
-                                    <img src="{{asset('storage/'. $event->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
+                                    <img src="{{asset('images/'. $event->coverImage)}}" width="100%" style="border-radius:4px;border:1px solid #bbb9b9;margin-bottom: 5px" />
                                 </div>
                             </div>
                             <div class="row form-group pull-right" style="margin-right: 5px">

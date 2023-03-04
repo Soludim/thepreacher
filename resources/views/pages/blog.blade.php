@@ -25,7 +25,7 @@
             @foreach($data->posts->data as $post)
             <div class="col-md-4 ftco-animate">
                 <div class="blog-entry">
-                    <a href="{{url('/post/' . Crypt::encrypt($post->id))}}" class="block-20" style="background-image: url({{asset('storage/' . $post->coverImage)}});">
+                    <a href="{{url('/post/' . Crypt::encrypt($post->id))}}" class="block-20" style="background-image: url({{asset('images/' . $post->coverImage)}});">
                     </a>
                     <div class="text p-4 d-block">
                         <div class="meta mb-3">
