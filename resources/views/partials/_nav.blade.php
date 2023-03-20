@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" style="display:flex; align-items: center" href="/"><img src="{{asset('images/logo-w.png')}}" width="50" />
+        <a class="navbar-brand" style="display:flex; align-items: center" href="/"><img src="{{asset('images/logo-w.png')}}" width="35" />
             <div style="flex-direction:column; margin-left:10px"><span>the</span> <span>Preacher</span></div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+            <span class="oi oi-menu"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">

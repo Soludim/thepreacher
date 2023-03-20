@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="Dashboard">
-  <meta name="keyword" content="Dashboard, Bootstrap, Admin">
+  <meta name="description" content="Welcome to the official website of Samuel Asampong Nyarko, 
+    a man of God committed to spreading the love and teachings of Jesus Christ. Here, you will find 
+    inspiring sermons, spiritual guidance, and resources to deepen your faith and grow in your relationship 
+    with God. Join our community of believers and experience the transformative power of God's love.">
+  <meta name="author" content="Soludim">
+  <meta name="keyword" content="Dashboard, Admin, thePreacher">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>Dashboard</title>
+  <title>Dashboard | thePreacher</title>
 
-  <!-- Favicons -->
-  <!-- <link href="{{asset('img/favicon.png')}}" rel="icon">
-  <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon"> -->
-
+  <link rel="icon" href="{{asset('images/logo-b.png')}}" type="image/png" />
   <!-- Bootstrap core CSS -->
   <link href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <!--external css-->

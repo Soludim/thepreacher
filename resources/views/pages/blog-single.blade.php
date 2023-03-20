@@ -29,7 +29,7 @@
 
                 <div class="about-author d-flex p-1 bg-light">
                     <div class="bio align-self-md-center mr-3">
-                        <img width="100px" height="100px" src="{{asset('storage/'.$data->post->user->profile_pic)}}" alt="" class="img-fluid">
+                        <img width="100px" height="100px" src="{{asset('images/'.$data->post->user->profile_pic)}}" alt="" class="img-fluid">
                     </div>
                     <div class="desc align-self-md-center">
                         <h3>{{$data->post->user->name}}</h3>
@@ -53,7 +53,7 @@
                         @foreach($data->post->comments as $comment)
                         <li class="comment" id="{{$comment->id}}">
                             <div class="vcard bio">
-                                <img src="{{asset('storage/'. $comment->user->profile_pic)}}" alt="">
+                                <img src="{{asset('images/'. $comment->user->profile_pic)}}" alt="">
                             </div>
                             <div class="comment-body">
                                 <h3>{{$comment->user->name}}</h3>
@@ -78,7 +78,7 @@
                                         @foreach($comment->replies as $reply)
                                         <li class="comment" id="{{$reply->id}}">
                                             <div class="vcard bio">
-                                                <img src="{{asset('storage/'. $reply->user->profile_pic)}}" alt="" />
+                                                <img src="{{asset('images/'. $reply->user->profile_pic)}}" alt="" />
                                             </div>
                                             <div class="comment-body">
                                                 <h3>{{$reply->user->name}}</h3>
@@ -153,7 +153,7 @@
                     <h3>Recent Blog</h3>
                     @foreach($data->latest_posts as $post)
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" href="{{url('/post/' . Crypt::encrypt($post->id))}}" style="background-image: url({{asset('storage/'.$post->coverImage)}});"></a>
+                        <a class="blog-img mr-4" href="{{url('/post/' . Crypt::encrypt($post->id))}}" style="background-image: url({{asset('images/'.$post->coverImage)}});"></a>
                         <div class="text">
                             <h4 class="heading">
                                 <a href="{{url('/post/' . Crypt::encrypt($post->id))}}">
@@ -333,7 +333,7 @@
                 $('.comment-list').append(`
                 <li class="comment" id="${comment.id}">
                             <div class="vcard bio">
-                                <img src="{{asset('storage/${comment.user.profile_pic}')}}" alt="">
+                                <img src="{{asset('images/${comment.user.profile_pic}')}}" alt="">
                             </div>
                             <div class="comment-body">
                                 <h3>${comment.user.name}</h3>
@@ -399,7 +399,7 @@
                 $('.replies'+commentId).append(`
                 <li class="comment" id="${reply.id}">
                                             <div class="vcard bio">
-                                                <img src="{{asset('storage/${reply.user.profile_pic}')}}" alt="" />
+                                                <img src="{{asset('images/${reply.user.profile_pic}')}}" alt="" />
                                             </div>
                                             <div class="comment-body">
                                                 <h3>${reply.user.name}</h3>

@@ -64,7 +64,7 @@
                     </a>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">I'm a New Convert</h3>
-                        <p>All manner of people are needed by God. Join us to serve our maker. You are warmly welcome!!!</p>
+                        <p>All manner of people are needed by God. You are warmly welcome!!!</p>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">Podcasts</h3>
-                        <p>Join my podcast to explore a range of topics and get inspired with my messages. Subscribe now and never miss an episode!</p>
+                        <p>Join my podcast to explore a range of topics. Subscribe now and never miss an episode!</p>
                     </div>
                 </div>
             </div>

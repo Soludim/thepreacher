@@ -22,7 +22,7 @@
         <h2 class="text-center mb-2">Personal Journey</h2>
         <div class="row justify-content-center pb-5">
             <div class="col-md-3 mb-2">
-                <img src="{{asset('images/profile.jpg')}}" alt="profile picture" class="img-fluid" style="border-radius:4px">
+                <img src="{{asset('images/profile.jpg')}}" alt="Samuel Asampong Nyarko" class="img-fluid" style="border-radius:4px">
             </div>
             <div class="col-md-7 heading-section ftco-animate">
                 <p>My name is Samuel Asampong Nyarko, and I was born and raised in Kumasi, Ghana.

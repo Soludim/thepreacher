@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>PASSWORD RESET</title>
+    <title>thePreacher | PASS RESET</title>
+    <meta name="description" content="Welcome to the official website of Samuel Asampong Nyarko, 
+    a man of God committed to spreading the love and teachings of Jesus Christ. Here, you will find 
+    inspiring sermons, spiritual guidance, and resources to deepen your faith and grow in your relationship 
+    with God. Join our community of believers and experience the transformative power of God's love.">
+    <link rel="icon" href="{{asset('images/logo-b.png')}}" type="image/png" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">

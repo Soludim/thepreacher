@@ -25,8 +25,8 @@
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Contact Information</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">{{config('app.church_address')}}</a></li>
                         <li><a href="#" class="py-2 d-block"><span class="icon icon-phone"></span> {{config('app.contact_phone')}}</a></li>
+                        <li><a href="#" class="py-2 d-block"><span class="icon icon-phone"></span> {{config('app.contact_phone_1')}}</a></li>
                         <li><a href="mailto:{{config('app.contact_mail')}}" class="py-2 d-block"><span class="icon icon-envelope"> {{config('app.contact_mail')}}</a></li>
                     </ul>
                 </div>

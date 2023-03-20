@@ -5,6 +5,7 @@ return [
     'church_name' => 'thePreacher',
     'church_address' => 'Kotei Rd, Behind Pacific Filling Station',
     'contact_phone' => '+233 50 153 8341',
+    'contact_phone_1' => '+233 55 828 2173',
     'contact_mail' => 'samuelnyarko425@gmail.com',
 
     'permissions' => [1,3],       ///role ids
