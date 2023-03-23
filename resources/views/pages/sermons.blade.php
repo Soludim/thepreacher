@@ -25,12 +25,12 @@
                 @if($data->sermons->data != null)
                 @foreach($data->sermons->data as $sermon)
                 <div class="row mb-4">
-                    <div class="col-12 text-center mb-3">
-                        <h5>
-                            <span class="badge badge-secondary" style="margin-left:5px; color:#fff; font-size:50%">{{$sermon->category->name}}</span>
+                    <div class="col-12 text-center mb-1">
+                        <h6>
+                            <span class="badge badge-secondary" style="margin-left:5px; color:#fff; font-size:60%">{{$sermon->category->name}}</span>
                             <span class="text-uppercase">&ldquo;{{$sermon->topic}}&rdquo;</span> &mdash;
                             <span> {{$sermon->speaker}}</span>
-                        </h5>
+                        </h6>
                     </div>
                     <div class="col-12">
                         <audio id="player2" preload="none" controls class="player">
