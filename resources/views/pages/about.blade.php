@@ -25,24 +25,18 @@
                 <img src="{{asset('images/profile.jpg')}}" alt="Samuel Asampong Nyarko" class="img-fluid" style="border-radius:4px">
             </div>
             <div class="col-md-7 heading-section ftco-animate">
-                <p>My name is Samuel Asampong Nyarko, and I was born and raised in Kumasi, Ghana.
-                    I attended Kumasi Anglican Senior High School, where I completed my secondary education.
-                    After graduating, I pursued my undergraduate degree in Business Administration at KNUST University,
-                    one of the top universities in Ghana.</p>
 
-                <p>During my time at KNUST, I became involved with a church group on campus
-                    and served as the prayer secretary in my third year. In my final year, I was elected as the president
-                    and also served as the SCC treasurer. These experiences allowed me to develop my
-                    leadership skills and gave me the opportunity to serve my fellow students.</p>
+                <p>Samuel Asampong Nyarko is a lubricated kingdom mind commissioned in an encounter with our Lord Jesus
+                    Christ in the year 2013. He has an apostolic mandate to raise yielded vessels who measure up to the
+                    fullness of the stature of Christ. His ministry emphasis is to cause men to think again and as part of
+                    his itinerant ministry, he constantly trumpets the essence of the Church of the living God, traversing
+                    this universe as THE BODY OF CHRIST. He is a lover of God and Men.</p>
 
-
-                <p>After completing my undergraduate degree in 2018, I decided to further my education by pursuing a
-                    Master's degree in Finance at KNUST. Combining ministry and studies was challenging, but I persevered
-                    and graduated in 2022.</p>
-
-                <p>Outside of my academic pursuits, I have been involved with various church denominations and have been
-                    honored to minister to congregations. My passion is to bring light and understanding to believers,
-                    and I hope to continue serving in this capacity throughout my life.</p>
+                <p>Born and raised by Mr. Martin Fiifi Nyarko and Dcns. Mrs. Bridget Amparbin in Asawasi, Kumasi.
+                    I attended Asawasi Presbyterian International School at the earlier stage of my life and then Kumasi
+                    Anglican Senior High School, where I completed my secondary education. After graduating, I pursued my
+                    undergraduate degree in Business Administration (Accounting option) and a Master’s in Finance at the
+                    Kwame Nkrumah University of Science and Technology, one of the top universities in Ghana.</p>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
             <div class="col-md-10 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Knowing <strong>Jesus Christ</strong> Together</h1>
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Consistency & The Fulfillment Of Prophecy <strong>[Heb 10:17]</strong></h1>
                 <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="/contact" class="btn btn-primary btn-outline-white px-4 py-3">Save your spirit</a></p>
             </div>
         </div>
@@ -47,11 +47,11 @@
         <div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-6 text-center heading-section ftco-animate">
                 <span class="subheading">Our Services</span>
-                <h2 class="mb-4">Giving light to someone</h2>
-                <p>You, my brothers and sisters, were called to be free. But do not use your freedom to indulge
-                    the flesh; rather, serve one another humbly in love.
+                <h2 class="mb-4">Lending Light and Love to God's People</h2>
+                <p>He that loveth his brother abideth in the light, and there is none occassion of 
+                    stumbling in him.
                 </p>
-                <p>Galatians 5:13</p>
+                <p>1 John 2:10</p>
             </div>
         </div>
         <div class="row">
