@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
             <div class="col-md-10 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Consistency & The Fulfillment Of Prophecy <strong>[Heb 10:17]</strong></h1>
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Consistency & The Fulfillment Of Prophecy</strong> [Heb 10:17]</h1>
                 <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="/contact" class="btn btn-primary btn-outline-white px-4 py-3">Save your spirit</a></p>
             </div>
         </div>

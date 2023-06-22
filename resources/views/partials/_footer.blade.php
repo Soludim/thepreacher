@@ -47,5 +47,8 @@
                 </div>
             </div>
         </div>
+        <div class="row float-right">
+            <p>© 2023 thePreacher.site | Built by <a href="https://israeldebrahmanu.web.app" target="_blank">Soludim</a></p>
+        </div>
     </div>
 </footer>
