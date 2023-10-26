@@ -7,6 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## How to use
+1. Create .env file. Copy and paste from .evn.example
+2. Edit database configuration in .env file
+3. Add a variable API_BASE=http://127.0.0.1:8001/ to .env
+4. Run composer install to install all packagees and dependencies
+5. Run php artisan key:generate to generate new key for the app
+6. Run php artisan serve --port=8001 to start the api
+7. Run php artisan serve to start your main app
+8. Visit url to view site
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
